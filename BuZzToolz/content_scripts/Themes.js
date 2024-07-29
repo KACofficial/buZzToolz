@@ -6,6 +6,7 @@ var themeActive = false;
 async function init() {
   var enabled = await isEnabled();
   if(enabled) {
+    console.log("Starting MutationObserver");
     const observer = new MutationObserver(handleMutations);
     observer.observe(document.documentElement, {
       subtree: true,
@@ -17,9 +18,9 @@ async function init() {
 }
 
 function applyTheme() {
-  if(themeActive) {
-    return;
-  }
+  //if(themeActive) {
+    //return;
+  //}
 
   themeActive = true;
   // apply general body themes
@@ -74,10 +75,14 @@ function isVideo() {
   }
 }
 
-function handleMutations(mutationsList) {
+async function handleMutations(mutationsList) {
   for (const mutation of mutationsList) {
     if (mutation.type === "childList" || mutation.type === "attributes") {
-      applyTheme();
+      const enabled = await isEnabled();
+      if (enabled && !themeActive) {
+        console.log("Applying theme from MutationObserver");
+        applyTheme();
+      }
     }
   }
 }
