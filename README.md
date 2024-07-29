@@ -1,5 +1,5 @@
 # BuZzToolz
-![Banner](assets/Banner.png)
+[![Banner](assets/Banner.png)](https://addons.mozilla.org/en-US/firefox/addon/buzztoolz/)
 This toolkit adds an optional download button to bSocial videos.  
 It also adds an optional midnight theme to bSocial.
 
