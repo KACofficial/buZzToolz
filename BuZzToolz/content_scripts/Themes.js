@@ -1,6 +1,7 @@
 //document.addEventListener("DOMContentLoaded", init);
 
 
+var themeActive = false;
 
 async function init() {
   var enabled = await isEnabled();
@@ -11,11 +12,16 @@ async function init() {
       childList: true,
       attributes: true,
     });
-    applyTheme();
+    // applyTheme();
   }
 }
 
 function applyTheme() {
+  if(themeActive) {
+    return;
+  }
+
+  themeActive = true;
   // apply general body themes
   var bodyElement = document.querySelector('body');
   var sidebarElement = document.querySelector('.position-fixed.d-flex.h-100.head_sidebar');
@@ -71,7 +77,7 @@ function isVideo() {
 function handleMutations(mutationsList) {
   for (const mutation of mutationsList) {
     if (mutation.type === "childList" || mutation.type === "attributes") {
-      checkUrl();
+      applyTheme();
     }
   }
 }
