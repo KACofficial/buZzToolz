@@ -1,6 +1,6 @@
 {
   "name": "BuZzToolz",
-  "version": "0.0.2.1",
+  "version": "0.0.2.2",
   "manifest_version": 3,
   "description": "Enhance bSocial with additional features.",
   "action": { "default_popup": "default_popup.html" },
