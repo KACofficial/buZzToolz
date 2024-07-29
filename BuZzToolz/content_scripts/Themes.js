@@ -5,6 +5,12 @@
 async function init() {
   var enabled = await isEnabled();
   if(enabled) {
+    const observer = new MutationObserver(handleMutations);
+    observer.observe(document.documentElement, {
+      subtree: true,
+      childList: true,
+      attributes: true,
+    });
     applyTheme();
   }
 }
@@ -59,6 +65,14 @@ function isVideo() {
     return true;
   } else {
     return false;
+  }
+}
+
+function handleMutations(mutationsList) {
+  for (const mutation of mutationsList) {
+    if (mutation.type === "childList" || mutation.type === "attributes") {
+      checkUrl();
+    }
   }
 }
 
