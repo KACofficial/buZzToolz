@@ -1,4 +1,11 @@
-//document.addEventListener("DOMContentLoaded", init);
+/*
+ * content_scripts/themes.js
+ * Author: Vance Perry (Epicman212)
+ * Copyright (C) 2024 KillAllChickens
+ * Licensed under the GPL-3.0 License
+ * DESCRIPTION:
+ * This code adds a midnight theme to bSocial
+ */
 
 
 var themeActive = false;
@@ -6,7 +13,7 @@ var themeActive = false;
 async function init() {
   var enabled = await isEnabled();
   if(enabled) {
-    console.log("Starting MutationObserver");
+    //console.log("Starting MutationObserver");
     const observer = new MutationObserver(handleMutations);
     observer.observe(document.documentElement, {
       subtree: true,
@@ -80,7 +87,7 @@ async function handleMutations(mutationsList) {
     if (mutation.type === "childList" || mutation.type === "attributes") {
       const enabled = await isEnabled();
       if (enabled && !themeActive) {
-        console.log("Applying theme from MutationObserver");
+        //console.log("Applying theme from MutationObserver");
         applyTheme();
       }
     }
