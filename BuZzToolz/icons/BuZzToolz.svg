@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="512"
+   height="512"
+   viewBox="0 0 512 512"
+   version="1.1"
+   id="svg1"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient2">
+      <stop
+         style="stop-color:#fff318;stop-opacity:1;"
+         offset="0"
+         id="stop2" />
+      <stop
+         style="stop-color:#8e9200;stop-opacity:1;"
+         offset="1"
+         id="stop3" />
+    </linearGradient>
+    <linearGradient
+       xlink:href="#linearGradient2"
+       id="linearGradient3"
+       x1="84.858665"
+       y1="99.883995"
+       x2="393.72824"
+       y2="403.21021"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-4.7438183,-6.2205811)" />
+  </defs>
+  <rect
+     style="fill:#0c0b16;fill-opacity:1;stroke:#e88d00;stroke-opacity:1"
+     id="rect5"
+     width="557.6734"
+     height="530.08978"
+     x="-22.772005"
+     y="-8.8832464"
+     ry="19.988113" />
+  <g
+     id="layer1"
+     style="stroke:#e88d00;stroke-opacity:1">
+    <rect
+       style="fill:url(#linearGradient3);stroke:#e88d00;stroke-opacity:1"
+       id="rect2"
+       width="483.78311"
+       height="472.10468"
+       x="14.108444"
+       y="19.947662"
+       ry="19.988113" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:333.333px;line-height:0.8;font-family:'Monaspace Krypton';-inkscape-font-specification:'Monaspace Krypton';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#e88d00;stroke-opacity:1"
+       x="252.66681"
+       y="374.33322"
+       id="text5"><tspan
+         id="tspan5"
+         x="252.66681"
+         y="374.33322"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:333.333px;font-family:'0xProto Nerd Font Mono';-inkscape-font-specification:'0xProto Nerd Font Mono';stroke:#e88d00;stroke-opacity:1">BT</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,47 @@
+html {
+    background-color: #0e0f13;
+}
+
+body {
+    width: 300px; /* Set a fixed width */
+    height: 500px; /* Set a fixed height */
+    text-align: center;
+    margin: 0;
+    padding: 20px; /* Add some padding for better spacing */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title { /* This is for the title */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #eeda58; /* The bSocial yellow color */
+    margin-bottom: 20px; /* Add some spacing below the title */
+    margin-top: 2px;
+    padding-top: 0px;
+}
+
+h1, h2, h3, h4, h5, h6, p, label, a { /* This is for every normal text item */
+    color: white;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: 'Inter', sans-serif;
+}
+
+form.options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form.options input[type="checkbox"] {
+    margin-right: 10px; /* Space between checkbox and label */
+}
+
+form.options label {
+    margin-top: 10px; /* Space above the label */
+}
+/*
+ * 43 lines,
+ * CSS makes no sense to me
+ */
