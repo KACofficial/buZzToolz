@@ -1,6 +1,6 @@
 {
   "name": "BuZzToolz",
-  "version": "0.0.1",
+  "version": "0.0.2.1",
   "manifest_version": 3,
   "description": "Enhance bSocial with additional features.",
   "action": { "default_popup": "default_popup.html" },
@@ -13,14 +13,7 @@
   "content_scripts": [
     {
       "matches": ["https://*.bsocial.buzz/*"],
-      "js": ["content_scripts/DownloadButtonLoader.js", "content_scripts/Themes.js"]
-    },
-    {
-      "matches": [
-        "https://*.bsocial.buzz/watch/*",
-        "https://*.bsocial.buzz/shorts/*"
-      ],
-      "js": ["content_scripts/addKeyBinds.js"]
+      "js": ["content_scripts/Themes.js", "content_scripts/DownloadButtonLoader.js"]
     }
   ],
   "web_accessible_resources": [

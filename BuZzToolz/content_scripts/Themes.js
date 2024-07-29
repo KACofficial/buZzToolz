@@ -1,5 +1,5 @@
 /*
- * content_scripts/themes.js
+ * content_scripts/Themes.js
  * Author: Vance Perry (Epicman212)
  * Copyright (C) 2024 KillAllChickens
  * Licensed under the GPL-3.0 License
@@ -7,28 +7,29 @@
  * This code adds a midnight theme to bSocial
  */
 
-
+//console.log("started themes.js");
 var themeActive = false;
 
 async function init() {
   var enabled = await isEnabled();
   if(enabled) {
+    applyTheme();
     //console.log("Starting MutationObserver");
-    const observer = new MutationObserver(handleMutations);
-    observer.observe(document.documentElement, {
-      subtree: true,
-      childList: true,
-      attributes: true,
-    });
+    //const observer = new MutationObserver(handleMutations);
+    //observer.observe(document.documentElement, {
+    //  subtree: true,
+    //  childList: true,
+    //  attributes: true,
+    //});
     // applyTheme();
   }
 }
 
 function applyTheme() {
-  //if(themeActive) {
-    //return;
-  //}
-
+  if(themeActive) {
+    return;
+  }
+  //console.log("Applying theme");
   themeActive = true;
   // apply general body themes
   var bodyElement = document.querySelector('body');
@@ -86,7 +87,7 @@ async function handleMutations(mutationsList) {
   for (const mutation of mutationsList) {
     if (mutation.type === "childList" || mutation.type === "attributes") {
       const enabled = await isEnabled();
-      if (enabled && !themeActive) {
+      if (enabled) {
         //console.log("Applying theme from MutationObserver");
         applyTheme();
       }
@@ -95,3 +96,4 @@ async function handleMutations(mutationsList) {
 }
 
 init();
+//export default init;

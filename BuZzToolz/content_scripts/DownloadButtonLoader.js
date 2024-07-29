@@ -6,6 +6,7 @@
  * DESCRIPTION:
  * This code adds a download button to all videos on bSocial.buzz.
  */
+//console.log("Loaded download button loader");
 
 async function checkDownloadEnabled() {
   const result = await browser.storage.sync.get("downloadOptionSet");
@@ -16,6 +17,7 @@ async function initialize() {
   const isDownloadEnabled = await checkDownloadEnabled();
   if (isDownloadEnabled) {
     checkUrl(); // initial check
+    //console.log("init checkurl ran");
     const observer = new MutationObserver(handleMutations);
     observer.observe(document.documentElement, {
       subtree: true,
@@ -28,19 +30,23 @@ async function initialize() {
 function checkUrl() {
   const currentUrl = window.location.href;
   if (currentUrl.includes("https://bsocial.buzz/watch")) {
+    //console.log("This is a long video");
     addLongDownloadButton();
   } else if (currentUrl.includes("https://bsocial.buzz/shorts")) {
+    //console.log("This is a short video");
     addShortsDownloadButton();
   } else {
+    //console.log("this is not a video");
     removeDownloadButton(); // Clean up button if not on the target page
   }
 }
 
 function addLongDownloadButton() {
   if (document.querySelector(".download-button")) {
+    //console.log("Long Video button already exists");
     return; // Button already exists, exit early
   }
-
+  //console.log("Adding Love Video Button");
   const button = document.createElement("button");
   button.innerHTML = `
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
@@ -85,9 +91,10 @@ function addLongDownloadButton() {
 function addShortsDownloadButton() {
   // Check if the button already exists
   if (document.querySelector(".download-button")) {
+    //console.log("Shorts button exists, quitting");
     return; // Button already exists, exit early
   } 
-
+  //console.log("adding shorts button");
   const viewCountDivs = document.querySelectorAll(
     'p[id^="video-views-count-"]',
   );
@@ -199,6 +206,7 @@ function generateFileName(url) {
 function handleMutations(mutationsList) {
   for (const mutation of mutationsList) {
     if (mutation.type === "childList" || mutation.type === "attributes") {
+      //console.log("Cheking url");
       checkUrl();
     }
   }

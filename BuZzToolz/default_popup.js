@@ -38,7 +38,6 @@ async function loadSettings() {
         
         if (result.midnightThemeSet !== undefined) {
             midnightTheme.checked = result.midnightThemeSet;
-            applyTheme(result.midnightThemeSet);
         }
         
         console.log("Settings loaded: ", result);
