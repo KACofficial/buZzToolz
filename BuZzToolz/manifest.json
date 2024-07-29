@@ -16,6 +16,9 @@
       "js": ["content_scripts/Themes.js", "content_scripts/DownloadButtonLoader.js"]
     }
   ],
+  "background": {
+    "scripts": ["service_worker.js"]
+  },
   "web_accessible_resources": [
     {
       "resources": ["pages/downloadLoader/downloadLoader.html"],
