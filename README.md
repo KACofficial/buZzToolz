@@ -9,6 +9,7 @@ Watch the showcase video here: [Showcase\(Youtube\)](https://www.youtube.com/wat
 
 
 ## Install
+
 - You can find the extension here: [addons.mozilla.org/en-US/firefox/addon/buzztoolz](https://addons.mozilla.org/en-US/firefox/addon/buzztoolz/)
 
 ## Info
